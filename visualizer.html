@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Entropic Visualizer/Try the Product</title>
+	<link rel="stylesheet" type="text/css" href="design.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head>
+<body>
+
+	<div class="topnav">
+		<a href="index.html">Home</a>
+		<a class="active" href="visualizer.html">Try the Product</a>
+		<a href="about_us.html">About Us</a>
+	</div>
+
+	<header>
+		<h1>Try the Product</h1>
+	</header>
+
+	<section>
+		<h2>Here is a prototype of how our product merged with the website would be like.</h2>
+	</section>
+
+	<label for="window">Choose the size of your window:</label>
+	<select id="window">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="4">4</option>
+		<option value="8">8</option>
+	</select>
+
+	<form action="action_page.php">
+		<label for="sequence">Input the RNA sequence here:</label>
+		<input type="text" id="sequence" name="sequence"><br><br>
+		<input class="submit" type="submit" value="Submit">
+	</form>
+
+	<button type="button" onclick="displayGraph(1)">Click to print</button>
+
+<script>
+function displayGraph(sw){
+	var pic;
+	if (sw==1){
+		print("graph.jpeg")
+	}
+	else{
+		pic="graph.jpeg"
+	}
+	document.getElementByID("image").scr=pic;
+}	
+</script>
+
+	<img id="image" src="graph.jpeg" width="1200" height="600">
+
+</body>
+</html>
